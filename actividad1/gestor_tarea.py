@@ -14,23 +14,34 @@ Nicolás Jofré Andrade
     - tareas.txt
 """
 # Se definen las 4 funciones pedidas
-def agregar_tarea():
-    print("Se ingresa a la función de agregar_tarea()")
+# 1. Ingreso de tareas
+def agregar_tarea(tarea, listaTareas):
+    listaTareas.append(tarea) # Se agrega la tarea ingresada
+    print("La tarea se agregó correctamente") 
 
-def mostrar_tareas():
-    print("Se ingresa a la función mostrar_tareas()")
+# 2. Mostrar tareas ingresadas
+def mostrar_tareas(listaTareas):
+    if listaTareas:
+        print("Lista de tareas: ")
+        for i, tarea in enumerate(listaTareas, start = 1):
+            print(f"{i}. {tarea}")
+    else:
+        print("No hay tareas pendientes.")
 
 def completar_tarea():
     print ("Se ingresa a la función completar_tarea()")
 
+# Se guarda la tarea en un archivo de texto
 def guardar_tareas():
     print("Se ingresa la función guardar_tareas()")
 
 # Inicio de programa 
-
+while True:
+    print("\n *** Gestor de tareas con Python ***")
+    
 
 # Inicialización de las 4 funciones
-agregar_tarea()
+"""agregar_tarea()
 mostrar_tareas()
 completar_tarea()
-guardar_tareas()
+guardar_tareas()"""
