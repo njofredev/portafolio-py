@@ -32,7 +32,7 @@ def guardar_tareas():
 
 
 # Inicialización de las 4 funciones
-"""agregar_tarea()
+agregar_tarea()
 mostrar_tareas()
 completar_tarea()
-guardar_tareas()"""
+guardar_tareas()
