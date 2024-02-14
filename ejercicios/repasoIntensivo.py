@@ -7,3 +7,8 @@ Operaciones aritméticas con asignación
 
 
 """
+
+num = 5
+for i in range(num):
+    num += 1
+    print(f"Esta es la primera vuelta {num} \n")
