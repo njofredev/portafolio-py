@@ -29,8 +29,6 @@ def guardar_tareas():
 # Inicio de programa 
 
 
-
-
 # Inicialización de las 4 funciones
 agregar_tarea()
 mostrar_tareas()
