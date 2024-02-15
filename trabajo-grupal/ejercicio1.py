@@ -13,17 +13,17 @@ ingreso del número.
 def ingresoNum():
     while True:
         try:
-            numIngresado = int(input("Ingrese un número entre el 2 y el 100 | 0 para salir \n"))
+            numIngresado = int(input("Ingrese un número entre el 1 y el 100 | 0 para salir \n"))
             
             if numIngresado == 0:
                 print("Gracias por participar!")
-                break    
+                break
 
-            if numIngresado < 2 or numIngresado > 100:
-                print("ERROR: Ingrese un número mayor a 2 y menor que 100 \n")
+            if numIngresado < 1 or numIngresado > 100:
+                print("ERROR: Ingrese un número mayor a 0 y menor que 100 \n")
             else:
                 if numIngresado % 2 == 0: # Número par
-                    for n in range(numIngresado + 2, 101, 2): 
+                    for n in range(numIngresado + 1, 101, 2): 
                         numIngresado += 2
                         print(f"El siguiente número par es: {numIngresado}")
                 else:                     # Número impar
@@ -35,3 +35,20 @@ def ingresoNum():
             print("ERROR: Ingrese un valor numérico")
             
 ingresoNum()
+
+nombre = "Fernando"
+edad = 30
+
+print(f"Mi nombre es: {nombre} y mi edad es: {30}")
+print("Mi nombre es: ", nombre, "y mi edad es: ", edad )
+
+
+
+
+
+
+
+
+
+
+
