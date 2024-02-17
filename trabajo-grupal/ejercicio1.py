@@ -36,13 +36,6 @@ def ingresoNum():
             
 ingresoNum()
 
-nombre = "Fernando"
-edad = 30
-
-print(f"Mi nombre es: {nombre} y mi edad es: {30}")
-print("Mi nombre es: ", nombre, "y mi edad es: ", edad )
-
-
 
 
 
