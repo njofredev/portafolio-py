@@ -13,11 +13,9 @@ Nicolás Jofré Andrade
 - Cómo se se completan y se guardan en un archivo de texto llamado:
     - tareas.txt
 """
-import os
-
 # Inicialización de variable que almacena la lista de tareas agregadas en la función agregar_tareas()
 lista_tareas = []
-# Se definen las 4 funciones pedidas | **Controlar manejo de excepciones
+# Se definen las 4 funciones pedidas |
 
 # 1. Ingreso de tareas
 def agregar_tarea():
@@ -31,11 +29,11 @@ def agregar_tarea():
         lista_tareas.append(tarea)
 
     print("¡Las tareas se agregaron correctamente!")
-    print(f"Las tareas son: {lista_tareas}")
+    print(f"Las tareas agregadas son: {lista_tareas}")
 
 # 2. Mostrar tareas ingresadas
 def mostrar_tareas():
-    print(f"Hasta el momento haz agregado: {len(lista_tareas)} tareas")
+    print(f"\n Hasta el momento has agregado: {len(lista_tareas)} tareas")
     print("Las tareas ingresadas hasta el momento son: ",lista_tareas)
 
 # 3. Completar tareas
@@ -45,24 +43,20 @@ def completar_tareas():
 # 4. Se guarda la tarea en un archivo de texto
 def guardar_tareas():
     nombre_archivo = "tareas.txt"
-    ruta = r"C:\Users\DivalCL\Desktop\dev\portafolio-py\actividad1"
-    # Se guarda el archivo tareas.txt en la variable ruta
-    ruta_completa = os.path.join(ruta, nombre_archivo)
 
     # Escribir las tareas en el archivo creado
-    with open (nombre_archivo, "a") as archivo:
+    with open (nombre_archivo, "w") as archivo:
         for n in lista_tareas:
             archivo.write(n + "\n")
     
     print(f"Las tareas fueron exitosamente guardadas en {nombre_archivo}")
-    print(f"El archivo se guardó en: {ruta_completa} ")
 
-# Inicio de programa 
+# Menú de script
 while True:
     print("\n *** Gestor de tareas con Python *** \n")
     print("1. Agregar tareas")
     print("2. Mostrar tareas")
-    print("3. Guarde las tareas en un tareas.txt")
+    print("3. Guarde las tareas en el archivo tareas.txt")
     print("4. Ingrese 0 para salir \n")
     opcion_menu = int(input("Ingrese una opción: \n"))
 
