@@ -1,7 +1,7 @@
 """
 Actividad n°1 "Manejo de lista de tareas"
 Nicolás Jofré Andrade
-14-02-2024
+19-02-2024
 
 - Crear un archivo llamado 'gestor_tareas.py'
 - Implementar 4 funciones:
@@ -13,35 +13,71 @@ Nicolás Jofré Andrade
 - Cómo se se completan y se guardan en un archivo de texto llamado:
     - tareas.txt
 """
-# Se definen las 4 funciones pedidas
+import os
+
+# Inicialización de variable que almacena la lista de tareas agregadas en la función agregar_tareas()
+lista_tareas = []
+# Se definen las 4 funciones pedidas | **Controlar manejo de excepciones
+
 # 1. Ingreso de tareas
-def agregar_tarea(tarea, listaTareas):
-    listaTareas.append(tarea) # Se agrega la tarea ingresada
-    print("La tarea se agregó correctamente") 
+def agregar_tarea():
+    try:
+        cant_tareas = int(input("¿Cuántas tareas quieres agregar?: \n"))
+    except ValueError:
+        print("ERROR: Ingrese un valor numérico")
+
+    for c in range(cant_tareas):
+        tarea = str(input("Ingrese la tarea: \n"))
+        lista_tareas.append(tarea)
+
+    print("¡Las tareas se agregaron correctamente!")
+    print(f"Las tareas son: {lista_tareas}")
 
 # 2. Mostrar tareas ingresadas
-def mostrar_tareas(listaTareas):
-    if listaTareas:
-        print("Lista de tareas: ")
-        for i, tarea in enumerate(listaTareas, start = 1):
-            print(f"{i}. {tarea}")
-    else:
-        print("No hay tareas pendientes.")
+def mostrar_tareas():
+    print(f"Hasta el momento haz agregado: {len(lista_tareas)} tareas")
+    print("Las tareas ingresadas hasta el momento son: ",lista_tareas)
 
-def completar_tarea():
-    print ("Se ingresa a la función completar_tarea()")
+# 3. Completar tareas
+def completar_tareas():
+    print("Completar tareas")
 
-# Se guarda la tarea en un archivo de texto
+# 4. Se guarda la tarea en un archivo de texto
 def guardar_tareas():
-    print("Se ingresa la función guardar_tareas()")
+    nombre_archivo = "tareas.txt"
+    ruta = r"C:\Users\DivalCL\Desktop\dev\portafolio-py\actividad1"
+    # Se guarda el archivo tareas.txt en la variable ruta
+    ruta_completa = os.path.join(ruta, nombre_archivo)
+
+    # Escribir las tareas en el archivo creado
+    with open (nombre_archivo, "a") as archivo:
+        for n in lista_tareas:
+            archivo.write(n + "\n")
+    
+    print(f"Las tareas fueron exitosamente guardadas en {nombre_archivo}")
+    print(f"El archivo se guardó en: {ruta_completa} ")
 
 # Inicio de programa 
 while True:
-    print("\n *** Gestor de tareas con Python ***")
-    
+    print("\n *** Gestor de tareas con Python *** \n")
+    print("1. Agregar tareas")
+    print("2. Mostrar tareas")
+    print("3. Guarde las tareas en un tareas.txt")
+    print("4. Ingrese 0 para salir \n")
+    opcion_menu = int(input("Ingrese una opción: \n"))
 
-# Inicialización de las 4 funciones
-"""agregar_tarea()
-mostrar_tareas()
-completar_tarea()
-guardar_tareas()"""
+    if opcion_menu == 0:
+        print("¡Gracias por participar en el gestor de tareas, vuelve pronto!")
+        break
+    elif opcion_menu == 1:
+        agregar_tarea()  
+    elif opcion_menu == 2:
+        mostrar_tareas()
+    elif opcion_menu == 3:
+        guardar_tareas()
+    elif opcion_menu == 0:
+        print("¡Gracias por participar en el gestor de tareas!")
+    else:
+        print("Ingrese un valor entre 0 y 3")
+    
+    
