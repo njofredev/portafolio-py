@@ -36,6 +36,3 @@ while True:
         print("¡Gracias por participar en el gestor de tareas!")
     else:
         print("Ingrese un valor entre 0 y 3")
-        
-
-# Sum: Terminé agregar tareas con fechas y mostrarlas con funciones

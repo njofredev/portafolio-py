@@ -15,7 +15,6 @@ Nicolás Jofré Andrade
 """
 # Inicialización de variable que almacena la lista de tareas agregadas en la función agregar_tareas()
 lista_tareas = []
-# Se definen las 4 funciones pedidas |
 
 # 1. Ingreso de tareas
 def agregar_tarea():
@@ -36,8 +35,8 @@ def mostrar_tareas():
     print(f"\n Hasta el momento has agregado: {len(lista_tareas)} tareas")
     print("Las tareas ingresadas hasta el momento son: ",lista_tareas)
 
-# 3. Completar tareas
-def completar_tareas():
+# 3. Completar tareas | Si la tarea está incompleta = 0 , si está completa = 1
+def completar_tareas(): 
     print("Completar tareas")
 
 # 4. Se guarda la tarea en un archivo de texto
