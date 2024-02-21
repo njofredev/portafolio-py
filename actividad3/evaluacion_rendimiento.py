@@ -7,3 +7,5 @@ Nicolás Jofré Andrade
 - Implementa un programa que evalúe el rendimiento de un estudiante
 según sus calificaciones en diferentes asignaturas.
 """
+from funciones_evaluacion import * 
+
