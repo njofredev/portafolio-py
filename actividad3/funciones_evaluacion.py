@@ -8,7 +8,6 @@ def definir_estudiantes(lista_notas, nombre_estudiante, edad_estudiante, asignat
         nombre_estudiante.append(nombre)
         edad = int(input("Ingrese la edad del estudiante: \n"))
         edad_estudiante.append(edad)
-        # Ingresar diferentes asignaturas
         asignatura = str(input("Ingrese la asignatura del estudiante: \n"))
         asignatura_estudiante.append(asignatura)
         cant_notas = int(input("Ingrese una cantidad de notas a evaluar: \n"))
@@ -20,7 +19,6 @@ def definir_estudiantes(lista_notas, nombre_estudiante, edad_estudiante, asignat
             lista_notas.append(nota)
             print ("Ingreso correcto!")
             
-        #for m in range() / Cantidad de asignaturas
     except ValueError:
         print("ERROR: Ingrese un valor real.")
 
