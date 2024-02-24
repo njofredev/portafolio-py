@@ -18,9 +18,9 @@ while True:
     print("2. Resta de dos números")
     print("3. Multiplicación de dos números")
     print("4. División de dos números") 
-    print("5. Potencia de un números") 
-    print("6. Raíz de un números") 
-    print("5. Salir del programa \n")
+    print("5. Potencia de un número") 
+    print("6. Raíz de un número") 
+    print("7. Salir del programa \n")
 
     text_primer_numero = "Ingrese el primero número: "
     text_segundo_numero = "Ingrese el segundo número: "
@@ -48,6 +48,16 @@ while True:
         resultado_division = dividirNumeros(num1,num2)
         print(f"\nEl resultado de la división es: {resultado_division}")
     elif opcion == 5:
+        num1 = int(input(text_primer_numero))
+        num2 = int(input("Ingrese el exponente para la potencia: "))
+        resultado_potencia = potenciaNumero(num1,num2)
+        print(f"\nEl resultado de la potencia es: {resultado_potencia}")
+    elif opcion == 6:
+        num1 = int(input(text_primer_numero))
+        resultado_raiz = raizNumero(num1)
+        print("La raíz cuadrada de", num1, "es:", resultado_raiz)
+
+    elif opcion == 7:
         print("Gracias por participar en la calculadora básica con Python!")
         break
     else:

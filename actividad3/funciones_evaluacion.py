@@ -55,9 +55,3 @@ def comparacion_notas(lista_notas, nombre_estudiante, asignatura_estudiante):
         print(f"¡Felicitaciones {nombre_estudiante[0]}, has aprobado {asignatura_estudiante[0]}:) !")
     else:
         print(f"¡Lo sentimos {nombre_estudiante[0]}, has reprobado {asignatura_estudiante[0]} :(!")
-
-"""
-sum: 
-Falta ingresar for para la cantidad de asignaturas - agregar asignaturas
-Todas las otras funciones están listas
-"""
