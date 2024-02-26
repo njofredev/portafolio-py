@@ -1,4 +1,4 @@
-import datetime
+from funciones_gestor import * 
 
 # Se definen las funciones mejoradas del gestor de tareas y sus parametros de entrada
 def agregar_tareas_con_fecha(lista_tareas, fecha_tarea):
