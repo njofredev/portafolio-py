@@ -58,7 +58,7 @@ while True:
         print("La raíz cuadrada de", num1, "es:", resultado_raiz)
 
     elif opcion == 7:
-        print("Gracias por participar en la calculadora básica con Python!")
+        print("Gracias por participar en la calculadora avanzada con Python!")
         break
     else:
         print("Ingrese un valor del menú indicado")
