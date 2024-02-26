@@ -6,4 +6,6 @@ Nicolás Jofré Andrade
 - Crea un archivo llamado 'registro_contactos.py'
 - Implementa un programa que permita a los usuarios gestionar un registro de 
 contactos utilizando diversas estructuras de datos en Python.
+
+funciones: agregar_contacto, mostrar_contacto, salir()
 """
